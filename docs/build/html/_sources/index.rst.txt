@@ -1,10 +1,10 @@
 .. mateshev documentation master file, created by
    sphinx-quickstart on Wed Jul 15 19:13:21 2020.
    You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+   contain the root `toctree` directive111111.
 
-Welcome to mateshev's documentation!
-====================================
+Mateshev Evgeny
+==================================================
 
 .. toctree::
    :maxdepth: 2
