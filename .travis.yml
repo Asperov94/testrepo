@@ -5,5 +5,5 @@ python:
 cache: pip
 dist: xenial
 os: linux
-install: "pip install sphinx==1.6.7"
+install: "pip install sphinx==3.1.2"
 script: sphinx-build -nWT -b dummy $TRAVIS_BUILD_DIR/docs/source/ _build/html
