@@ -2,8 +2,8 @@ language: python
 python:
   - "2.7"
   - "3.6"
-sudo: false
 cache: pip
-
+dist: xenial
+os: linux
 install: "pip install sphinx==1.6.7"
-script: ./build/sphinx-build -nWT -b dummy . _build/html
+script: sphinx-build -nWT -b dummy $TRAVIS_BUILD_DIR/docs/source/ _build/html
