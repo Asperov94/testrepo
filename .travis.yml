@@ -5,9 +5,9 @@ cache: pip
 dist: xenial
 os: linux
 install: "pip install sphinx==3.1.2"
-script: 
-  - sphinx-build -nWT -b dummy $TRAVIS_BUILD_DIR/docs/source/ build/html && make $TRAVIS_BUILD_DIR/docs/html
-  - touch docs/build/html/.nojekyll
+script:
+  - touch docs/build/html/.nojekyll 
+  - sphinx-build -nWT -b dummy $TRAVIS_BUILD_DIR/docs/source/ build/html && make -C docs/ html
 deploy:
   - provider: pypi
     user: "__token__"
