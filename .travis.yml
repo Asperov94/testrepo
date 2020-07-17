@@ -7,7 +7,7 @@ os: linux
 install: "pip install sphinx==3.1.2"
 script:
   - touch docs/build/html/.nojekyll 
-  - sphinx-build -nWT -b dummy $TRAVIS_BUILD_DIR/docs/source/ build/html && $TRAVIS_BUILD_DIR/docs/make html
+  - sphinx-build -nWT -b dummy $TRAVIS_BUILD_DIR/docs/source/ build/html && make -C docs/ html
 deploy:
   provider: pages
   github-token: $GITHUB_TOKEN
