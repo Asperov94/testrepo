@@ -68,44 +68,44 @@ style="width:80%">
 <!--Начинаем абзац с красной строки-->
 <p style="text-indent:20px">
 linux<br>
----
-for i in 1 2 3 4 ; do echo ==================$i; ssh $i 'sudo service tomcat8 stop && sudo service tomcat8 start'; done
----
-echo $user ALL=\(ALL\) NOPASSWD: ALL > /etc/sudoers.d/$user
----
-ss -lntu 
-lsof -i
-netstat -lntup
----
-echo proxy=socks5://1.1.1.1:100 >> /etc/yum.conf
----
-ssh -D 5555 root@1.1.1.1 -f -N && echo "proxy=http://127.0.0.1:5555" >> /etc/yum.conf && yum update
----
-ls -lah $(docker inspect $(docker ps -q) |grep .json | awk -F\" '{print $4}')
----
-systemctl list-units --type service --all
----
-netstat -np --tcp | awk '{print $4 " - " $5 " - " $6 " - " $7}'
----
-/etc/docker/daemon.json:
-  "log-opts": {
-      "max-size": "512m",
-      "max-file": "1"
-  }
----
-find /var -size +100M -exec ls -lh {} \; | awk '{print $5" - "$9}' | sort -h
-du -hx --max-depth=1 /var/lib/docker | sort -h
-du -ah /* 2>/dev/null | sort -rh | head -n 10   
----
-rabbitmqctl list_vhosts name
-rabbitmqctl --vhost /projects list_queues
-rabbitmqctl -p /opendata list_queues
-rabbitmqctl --vhost /projects purge_queue project_out_search
----
-for i in $(cat /etc/passwd |awk -F":" '{print $1}') ; do crontab -u $i -l; done
----
-find /var/log/nginx/ -mtime +7 |xargs rm -rf
----
+---<br>
+for i in 1 2 3 4 ; do echo ==================$i; ssh $i 'sudo service tomcat8 stop && sudo service tomcat8 start'; done<br>
+ <br>---<br>
+echo $user ALL=\(ALL\) NOPASSWD: ALL > /etc/sudoers.d/$user<br>
+---<br>
+ss -lntu<br> 
+lsof -i<br>
+netstat -lntup<br>
+---<br>
+echo proxy=socks5://1.1.1.1:100 >> /etc/yum.conf<br>
+---<br>
+ssh -D 5555 root@1.1.1.1 -f -N && echo "proxy=http://127.0.0.1:5555" >> /etc/yum.conf && yum update<br>
+---<br>
+ls -lah $(docker inspect $(docker ps -q) |grep .json | awk -F\" '{print $4}')<br>
+---<br>
+systemctl list-units --type service --all<br>
+---<br>
+netstat -np --tcp | awk '{print $4 " - " $5 " - " $6 " - " $7}'<br>
+---<br>
+/etc/docker/daemon.json:<br>
+  "log-opts": {<br>
+      "max-size": "512m",<br>
+      "max-file": "1"<br>
+  }<br>
+---<br>
+find /var -size +100M -exec ls -lh {} \; | awk '{print $5" - "$9}' | sort -h<br>
+du -hx --max-depth=1 /var/lib/docker | sort -h<br>
+du -ah /* 2>/dev/null | sort -rh | head -n 10  <br> 
+---<br>
+rabbitmqctl list_vhosts name<br>
+rabbitmqctl --vhost /projects list_queues<br>
+rabbitmqctl -p /opendata list_queues<br>
+rabbitmqctl --vhost /projects purge_queue project_out_search<br>
+---<br>
+for i in $(cat /etc/passwd |awk -F":" '{print $1}') ; do crontab -u $i -l; done<br>
+---<br>
+find /var/log/nginx/ -mtime +7 |xargs rm -rf<br>
+---<br>
 
 
 
