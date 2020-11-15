@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Название сайта</title>
+</head>
+<body>
+<!--Создаём таблицу контейнер, которой задаём следующее
+оформление:
+border="1" - рамка вокруг контейнера. Увеличив число, можно увеличить толщину рамки.
+align="center" - размещаем контейнер по центру экрана.
+rules="rows" - убираем двойную рамку.
+style="width:60%;" - добавляем стилевое свойства, делающее
+контейнер и весь сайт "резиновым".
+.Сделать полноценный адаптивный дизайн, этим способом невозможно.-->
+<table
+border="1"
+align="center"
+rules="rows"
+style="width:60%;">
+<!--Создаём строку-->
+<tr>
+<!--Создаём ячейку строки-->
+<td>
+<!--ШАПКА САЙТА-->
+
+<table
+border="1"
+background="images/168.png"
+bgcolor="#7FFFD4"
+cellpadding="10"
+style="width:100%; border-radius:5px;">
+<!--Создаём строку таблицы-->
+<tr>
+<!--Создаём столбец таблицы-->
+<th>
+<!--Содержание ячейки столбца-->
+<h1>LINUX</h1>
+<h3>MY HELP</h3>
+<!--Закрываем таблицу-->
+</th>
+</tr>
+</table>
+
+<!--ОСНОВНОЙ КОНТЕНТ-->
+
+<!--В этой же ячейке контейнера создаём ещё одну таблицу
+для основного контента.
+Оформление как и в предыдущей таблице-->
+
+<table
+border="1"
+bgcolor="#e6e6fa"
+cellpadding="10"
+style="width:100%; border-radius:5px;">
+<!--Создаём строку-->
+<tr>
+<!--Создаём ячейку
+Оформление:
+rowspan="2" - объединяем две ячейки в одну.
+Число объединяемых ячеек по числу ячеек в сайдбаре.
+style="width:80%" - основной контент занимает 80% всей площади,
+оставшиеся 20% для сайдбара-->
+<td
+rowspan="2"
+style="width:80%">
+<h2>My settings</h2>
+<!--Начинаем абзац с красной строки-->
+<p style="text-indent:20px">
+linux<br>
+---
+for i in 1 2 3 4 ; do echo ==================$i; ssh $i 'sudo service tomcat8 stop && sudo service tomcat8 start'; done
+---
+echo $user ALL=\(ALL\) NOPASSWD: ALL > /etc/sudoers.d/$user
+---
+ss -lntu 
+lsof -i
+netstat -lntup
+---
+echo proxy=socks5://1.1.1.1:100 >> /etc/yum.conf
+---
+ssh -D 5555 root@1.1.1.1 -f -N && echo "proxy=http://127.0.0.1:5555" >> /etc/yum.conf && yum update
+---
+ls -lah $(docker inspect $(docker ps -q) |grep .json | awk -F\" '{print $4}')
+---
+systemctl list-units --type service --all
+---
+netstat -np --tcp | awk '{print $4 " - " $5 " - " $6 " - " $7}'
+---
+/etc/docker/daemon.json:
+  "log-opts": {
+      "max-size": "512m",
+      "max-file": "1"
+  }
+---
+find /var -size +100M -exec ls -lh {} \; | awk '{print $5" - "$9}' | sort -h
+du -hx --max-depth=1 /var/lib/docker | sort -h
+du -ah /* 2>/dev/null | sort -rh | head -n 10   
+---
+rabbitmqctl list_vhosts name
+rabbitmqctl --vhost /projects list_queues
+rabbitmqctl -p /opendata list_queues
+rabbitmqctl --vhost /projects purge_queue project_out_search
+---
+for i in $(cat /etc/passwd |awk -F":" '{print $1}') ; do crontab -u $i -l; done
+---
+find /var/log/nginx/ -mtime +7 |xargs rm -rf
+---
+
+
+
+
+<p style="text-indent:20px">
+linux<br>
+---
+<p style="text-indent:20px">
+linux<br>
+---
+<p style="text-indent:20px">
+linux<br>
+---
+linux<br>
+---
+</p>
+</td>
+
+
+<td bgcolor="#e6e6fa">
+<h3>Меню</h3>
+<p>
+<a href="">
+<img src="http://trueimages.ru/img/00/06/f4fffdb5.png">
+<span style="margin-left:5px;">Страница</span></a>
+</p>
+<p>
+<a href="">
+<img src="http://trueimages.ru/img/31/ab/4dcb087c2ae4305edcd15171696.jpg">
+<span style="margin-left:5px;">Страница 1</span;></a>
+</p>
+<p>
+<a href="">
+<img src="http://trueimages.ru/img/31/ab/4dcb087c2ae4305edcd15171696.jpg">
+<span style="margin-left:5px;">Страница 2</span></a>
+</p>
+</td>
+</tr>
+<tr>
+<td
+bgcolor="#e6e6fa"
+align="center">
+<h3>Общая информация</h3>
+<p>Текст общей информации или реклама</p>
+</td>
+</tr>
+</table>
+
+<table
+border="1"
+bgcolor="#7FFFD4"
+height="100"
+cellpadding="10"
+style="width:100%; border-radius:5px;">
+<tr>
+<th>
+<h3>Подвал</h3>
+</th>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
