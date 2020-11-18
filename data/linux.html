@@ -66,7 +66,6 @@ rowspan="2"
 style="width:80%">
 <h2>My settings</h2>
 <!--Начинаем абзац с красной строки-->
-<p style="text-indent:20px">
 linux<br>
 ---<br>
 for i in 1 2 3 4 ; do echo ==================$i; ssh $i 'sudo service tomcat8 stop && sudo service tomcat8 start'; done<br>
@@ -106,17 +105,11 @@ for i in $(cat /etc/passwd |awk -F":" '{print $1}') ; do crontab -u $i -l; done<
 ---<br>
 find /var/log/nginx/ -mtime +7 |xargs rm -rf<br>
 ---<br>
-
-
-
-
-<p style="text-indent:20px">
+linux<br>
+cat file |grep -v f | cut -d "|" -f3 <br>
+---
 linux<br>
 ---
-<p style="text-indent:20px">
-linux<br>
----
-<p style="text-indent:20px">
 linux<br>
 ---
 linux<br>
